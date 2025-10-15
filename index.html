@@ -13,61 +13,93 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #ffffff;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
+            color: #1a1a1a;
         }
         
         .container {
-            background: white;
-            border-radius: 20px;
-            padding: 60px 40px;
-            max-width: 600px;
+            max-width: 700px;
             width: 100%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
         
+        .launch-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
         .logo {
-            font-size: 48px;
+            font-size: 64px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+        
+        .headline {
+            font-size: 42px;
             font-weight: 800;
-            color: #667eea;
+            color: #1a1a1a;
+            line-height: 1.2;
             margin-bottom: 20px;
             letter-spacing: -1px;
         }
         
-        .tagline {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        
-        .description {
-            font-size: 18px;
-            color: #666;
+        .subheadline {
+            font-size: 20px;
+            color: #6b7280;
             line-height: 1.6;
             margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        .status {
-            display: inline-block;
-            background: #ffeaa7;
-            color: #d63031;
-            padding: 12px 24px;
-            border-radius: 25px;
-            font-weight: 600;
-            margin-bottom: 30px;
-            font-size: 16px;
+        .cta-section {
+            background: #f9fafb;
+            border: 2px solid #10b981;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .cta-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #059669;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
         .email-form {
             display: flex;
-            gap: 10px;
-            margin-bottom: 30px;
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto 20px;
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -75,82 +107,125 @@
         .email-input {
             flex: 1;
             min-width: 250px;
-            padding: 15px 20px;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
+            padding: 16px 24px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
             font-size: 16px;
-            transition: border-color 0.3s;
+            transition: all 0.3s;
+            background: white;
         }
         
         .email-input:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
         }
         
         .notify-btn {
-            padding: 15px 30px;
-            background: #667eea;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
         }
         
         .notify-btn:hover {
-            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+        
+        .notify-btn:active {
+            transform: translateY(0);
+        }
+        
+        .early-access-note {
+            font-size: 14px;
+            color: #6b7280;
+            font-style: italic;
         }
         
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
         }
         
         .feature {
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 12px;
+            text-align: center;
         }
         
         .feature-icon {
-            font-size: 32px;
-            margin-bottom: 10px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 15px;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+        }
+        
+        .feature-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
         }
         
         .feature-text {
             font-size: 14px;
-            color: #666;
-            font-weight: 500;
+            color: #6b7280;
+            line-height: 1.5;
         }
         
-        .contact {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid #f0f0f0;
-            color: #999;
+        .divider {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-radius: 2px;
+            margin: 50px auto;
+        }
+        
+        .footer {
+            padding-top: 20px;
+            color: #9ca3af;
             font-size: 14px;
         }
         
-        .contact a {
-            color: #667eea;
+        .footer a {
+            color: #10b981;
             text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .footer a:hover {
+            color: #059669;
         }
         
         @media (max-width: 600px) {
-            .container {
-                padding: 40px 25px;
-            }
-            
             .logo {
-                font-size: 36px;
+                font-size: 48px;
             }
             
-            .tagline {
-                font-size: 20px;
+            .headline {
+                font-size: 32px;
+            }
+            
+            .subheadline {
+                font-size: 18px;
+            }
+            
+            .cta-section {
+                padding: 30px 20px;
             }
             
             .email-form {
@@ -160,48 +235,66 @@
             .email-input {
                 min-width: 100%;
             }
+            
+            .features {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">Regalia</div>
-        <div class="tagline">Custom Tailoring Made Simple</div>
-        <div class="status">🚀 Coming Soon</div>
+        <div class="launch-badge">🚀 Launching Soon</div>
         
-        <p class="description">
-            The marketplace connecting customers with skilled tailors for custom-made clothing. 
-            Submit your design, receive bids from talented tailors, and get the perfect fit.
+        <div class="logo">Regalia</div>
+        
+        <h1 class="headline">Where African Craftsmanship Meets Modern Style</h1>
+        
+        <p class="subheadline">
+            The game-changing marketplace connecting you with talented tailors across Africa. 
+            Submit your design. Get competitive bids. Wear perfection.
         </p>
         
-        <form class="email-form" id="emailForm">
-            <input 
-                type="email" 
-                class="email-input" 
-                placeholder="Enter your email" 
-                required
-                id="emailInput"
-            >
-            <button type="submit" class="notify-btn">Notify Me at Launch</button>
-        </form>
+        <div class="cta-section">
+            <div class="cta-title">✨ Be First to Experience the Future of Custom Tailoring</div>
+            
+            <form class="email-form" id="emailForm">
+                <input 
+                    type="email" 
+                    class="email-input" 
+                    placeholder="Enter your email" 
+                    required
+                    id="emailInput"
+                >
+                <button type="submit" class="notify-btn">Get Early Access</button>
+            </form>
+            
+            <p class="early-access-note">Join the waitlist and be the first to know when we launch!</p>
+        </div>
         
         <div class="features">
             <div class="feature">
                 <div class="feature-icon">👔</div>
-                <div class="feature-text">Custom Designs</div>
+                <div class="feature-title">Your Vision</div>
+                <div class="feature-text">Upload your custom design and specifications</div>
             </div>
             <div class="feature">
                 <div class="feature-icon">✂️</div>
-                <div class="feature-text">Expert Tailors</div>
+                <div class="feature-title">Expert Tailors</div>
+                <div class="feature-text">Receive bids from skilled craftspeople</div>
             </div>
             <div class="feature">
-                <div class="feature-icon">💳</div>
-                <div class="feature-text">Secure Payments</div>
+                <div class="feature-icon">💚</div>
+                <div class="feature-title">Perfect Fit</div>
+                <div class="feature-text">Get quality clothing made just for you</div>
             </div>
         </div>
         
-        <div class="contact">
-            Questions? Email us at <a href="mailto:regaliaafrica1@gmail.com">regaliaafrica1@gmail.com</a>
+        <div class="divider"></div>
+        
+        <div class="footer">
+            Questions? Reach us at <a href="mailto:regaliaafrica1@gmail.com">regaliaafrica1@gmail.com</a>
         </div>
     </div>
     
@@ -209,7 +302,7 @@
         document.getElementById('emailForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const email = document.getElementById('emailInput').value;
-            alert('Thanks for your interest! We\'ll notify you at ' + email + ' when we launch.');
+            alert('🎉 Awesome! You\'re on the list! We\'ll email you at ' + email + ' the moment we launch.');
             document.getElementById('emailInput').value = '';
         });
     </script>
